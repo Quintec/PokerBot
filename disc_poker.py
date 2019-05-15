@@ -38,7 +38,7 @@ def run():
 @bot.event
 async def on_ready():
     global first_run
-    await bot.change_presence(game=discord.Game(name='p!help'))
+    await bot.change_presence(status=discord.Status.idle, activity=discord.Game(name='p!help'))
     if first_run:
         channel = bot.get_channel(448910359718395908)
         await channel.send("PokerBot is now online. Get your chips ready!")
